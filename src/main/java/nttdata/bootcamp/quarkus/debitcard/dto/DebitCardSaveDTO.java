@@ -6,8 +6,15 @@ public class DebitCardSaveDTO {
     public Integer pin;
     private String validationcode;
 
+    private  String dniClient;
 
+    public String getDniClient() {
+        return dniClient;
+    }
 
+    public void setDniClient(String dniClient) {
+        this.dniClient = dniClient;
+    }
 
     public String getCardnumber() {
         return cardnumber;

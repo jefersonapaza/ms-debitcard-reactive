@@ -30,6 +30,8 @@ public class DebitCardServiceImpl implements DebitCardService{
         debitcard.setValidationcode(debitCardSaveDTO.getValidationcode());
         debitcard.setPin(debitCardSaveDTO.getPin());
         debitcard.setEstadotarjeta("A");
+        debitcard.setDniClient(debitCardSaveDTO.getDniClient());
+
         return debitcardRepository.saveDebitCard(debitcard);
     }
 

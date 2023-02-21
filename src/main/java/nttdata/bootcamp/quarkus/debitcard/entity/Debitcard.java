@@ -1,11 +1,13 @@
 package nttdata.bootcamp.quarkus.debitcard.entity;
 
+import io.quarkus.mongodb.panache.common.MongoEntity;
 import io.quarkus.mongodb.panache.reactive.ReactivePanacheMongoEntity;
 import org.bson.types.ObjectId;
 
 
 import java.util.Date;
 
+@MongoEntity(collection="debitcard")
 public class Debitcard extends ReactivePanacheMongoEntity {
 
     private ObjectId id;
@@ -15,6 +17,8 @@ public class Debitcard extends ReactivePanacheMongoEntity {
     public String validationcode;
 
     public String estadotarjeta;
+
+    public String dniClient;
 
 
     public ObjectId getId() {
@@ -63,5 +67,13 @@ public class Debitcard extends ReactivePanacheMongoEntity {
 
     public void setEstadotarjeta(String estadotarjeta) {
         this.estadotarjeta = estadotarjeta;
+    }
+
+    public String getDniClient() {
+        return dniClient;
+    }
+
+    public void setDniClient(String dniClient) {
+        this.dniClient = dniClient;
     }
 }
